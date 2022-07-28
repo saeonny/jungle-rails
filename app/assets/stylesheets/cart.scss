@@ -10,3 +10,21 @@
     color: white;
   }
 }
+
+.alert {
+  padding: 20px;
+  background-color: rgba(0, 130, 29, 0.7);
+  color: white;
+}
+
+.link{
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
