@@ -1,7 +1,9 @@
 class OrdersController < ApplicationController
-
+  
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:id]) # Order : id, total_cents, created_at, updated_at,
+    
+
   end
 
   def create
