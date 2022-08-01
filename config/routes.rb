@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # root : is / home page 
   root to: 'products#index' # parse to controller 
+  get "about" => 'about#index'
   # get '/' => 'products#index' //old class 
   # get '/' => {controller : 'products', action: 'index'} <= please map to this
    
