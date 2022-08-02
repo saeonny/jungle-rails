@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   # root : is / home page 
   root to: 'products#index' # parse to controller 
-  get "about" => 'about#index'
-  # get '/' => 'products#index' //old class 
-  # get '/' => {controller : 'products', action: 'index'} <= please map to this
+  # about page 
+
+
    
    
   #endpoint as product 
+  resources :about, only: [:index]
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
+    resources :categories, except: [:edit, :update, :show, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
